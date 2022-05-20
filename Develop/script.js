@@ -3,8 +3,8 @@ var today = moment();
 $('#currentDay').text(today.format ("MMM Do, YYYY"));
 
 //Save the user text into local storage
-$(".saveBtn").on('click', function (event) {
-    event.preventDefault();
+$(".saveBtn").on('click', function () {
+    
     var userText = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
     localStorage.setItem(time, userText);
